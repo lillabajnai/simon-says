@@ -70,11 +70,11 @@ static struct {
 	key_state_t avr_key_state; // last UI key state change translated to AVR button press/release
 	const char * name; // symbolic name
 } button[5] = {
-	{ .key='8', .ui_key_state = { .count = 0, .state = 1 }, .avr_key_state = { .count = 0, .state = 1 }, .name = "B1" },
-	{ .key='4', .ui_key_state = { .count = 0, .state = 1 }, .avr_key_state = { .count = 0, .state = 1 }, .name = "B2" },
-	{ .key='5', .ui_key_state = { .count = 0, .state = 1 }, .avr_key_state = { .count = 0, .state = 1 }, .name = "B3" },
-	{ .key='6', .ui_key_state = { .count = 0, .state = 1 }, .avr_key_state = { .count = 0, .state = 1 }, .name = "B4" },
-	{ .key='2', .ui_key_state = { .count = 0, .state = 1 }, .avr_key_state = { .count = 0, .state = 1 }, .name = "B5" },
+	{ .key='i', .ui_key_state = { .count = 0, .state = 1 }, .avr_key_state = { .count = 0, .state = 1 }, .name = "B1" },
+	{ .key='e', .ui_key_state = { .count = 0, .state = 1 }, .avr_key_state = { .count = 0, .state = 1 }, .name = "B2" },
+	{ .key='j', .ui_key_state = { .count = 0, .state = 1 }, .avr_key_state = { .count = 0, .state = 1 }, .name = "B3" },
+	{ .key='\r', .ui_key_state = { .count = 0, .state = 1 }, .avr_key_state = { .count = 0, .state = 1 }, .name = "B4" },
+	{ .key='f', .ui_key_state = { .count = 0, .state = 1 }, .avr_key_state = { .count = 0, .state = 1 }, .name = "B5" },
 };
 static uint8_t rotation = 0; // Rotation of LCD screen, between 0 and 3
 static hd44780_t hd44780; // simulated LCD controller
@@ -453,7 +453,7 @@ int main(int argc, char *argv[])
 	printf("This is an Olimex AVR-MT128 development board simulation\n"
 		"Press 'q' to exit\n"
 		"Press 'r' to rotate the display\n"
-		"Press '8', '4', '5', '6', or '2' for buttons B1..B5\n");
+		"Game controls: 'e' (upper-left), 'i' (upper-right), 'f' (lower-left), 'j' (lower-right), Enter (select)\n");
 
 	run_avr();
 	run_ui();
