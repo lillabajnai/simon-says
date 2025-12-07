@@ -1,0 +1,8 @@
+board_olimex_avr_mt128
+
+(C) 2020 Akos Kiss <akiss@inf.u-szeged.hu>
+
+Experimental Olimex AVR-MT128 development board simulation.
+Based on works of and sample code from
+- Michel Pollet <buserror@gmail.com> and
+- Luki <humbell@ethz.ch>.
